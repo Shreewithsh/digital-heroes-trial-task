@@ -39,7 +39,7 @@ interface Tab {
   id: TabId;
   label: string;
   shortLabel: string;
-  icon: React.FC<{ className?: string }>;
+  icon: React.ComponentType<{ className?: string; size?: number }>;
   description: string;
   gradient: string;
   glowColor: string;
