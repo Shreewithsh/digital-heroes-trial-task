@@ -168,7 +168,7 @@ export default function PDFToImage() {
         if (!ctx) throw new Error("Canvas 2D context unavailable.");
 
         // Render the PDF page into the canvas
-        await page.render({ canvasContext: ctx, viewport }).promise;
+        await page.render({ canvasContext: ctx, viewport, canvas }).promise;
 
         // Export canvas to Blob
         const mimeType = format === "png" ? "image/png" : "image/jpeg";
